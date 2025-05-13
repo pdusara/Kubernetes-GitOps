@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_iam_role" "eks" {
   name = "eks-cluster-role"
 
@@ -31,6 +27,7 @@ resource "aws_iam_role" "eks_node_role" {
     }]
   })
 }
+
 
 resource "aws_iam_role_policy_attachment" "eks_worker_node" {
   role       = aws_iam_role.eks_node_role.name
