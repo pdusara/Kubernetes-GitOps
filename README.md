@@ -11,11 +11,41 @@ It is designed as a foundation for integrating GitOps tools like **ArgoCD** or *
 
 ---
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TD
+    subgraph Terraform
+        A1[Provision AWS EKS Cluster]
+        A2[Set Up IAM Roles & Policies]
+        A3[Define Networking & Subnets]
+        A4[Create Spot Worker Nodes]
+    end
+
+    subgraph AWS EKS Cluster
+        B1[Kubernetes Control Plane]
+        B2[Worker Nodes - Spot Instances]
+        B3[Networking - VPC, Subnets, NAT]
+    end
+
+    subgraph GitOps Integration
+        C1[ArgoCD/FluxCD Installed]
+        C2[Application Repositories Connected]
+        C3[Automated Deployments via Git]
+    end
+
+    subgraph CI/CD Pipeline
+        D1[GitHub Actions]
+        D2[Build & Test Application]
+        D3[Deploy to EKS via GitOps]
+    end
+
+    A1 --> B1
+    A4 --> B2
+    A3 --> B3
+    B1 --> C1
+    B2 --> C2
+    C2 --> C3
+    D1 --> D2
+    D2 --> D3
+    D3 --> C3
 ```
 ---
 
