@@ -10,43 +10,7 @@ This project provisions a **production-ready AWS EKS cluster** using **Terraform
 It is designed as a foundation for integrating GitOps tools like **ArgoCD** or **FluxCD**, enabling continuous, automated, and declarative application delivery.
 
 ---
-```mermaid
-graph TD
-    subgraph Terraform
-        A1[Provision AWS EKS Cluster]
-        A2[Set Up IAM Roles & Policies]
-        A3[Define Networking & Subnets]
-        A4[Create Spot Worker Nodes]
-    end
-
-    subgraph AWS EKS Cluster
-        B1[Kubernetes Control Plane]
-        B2[Worker Nodes - Spot Instances]
-        B3[Networking - VPC, Subnets, NAT]
-    end
-
-    subgraph GitOps Integration
-        C1[ArgoCD/FluxCD Installed]
-        C2[Application Repositories Connected]
-        C3[Automated Deployments via Git]
-    end
-
-    subgraph CI/CD Pipeline
-        D1[GitHub Actions]
-        D2[Build & Test Application]
-        D3[Deploy to EKS via GitOps]
-    end
-
-    A1 --> B1
-    A4 --> B2
-    A3 --> B3
-    B1 --> C1
-    B2 --> C2
-    C2 --> C3
-    D1 --> D2
-    D2 --> D3
-    D3 --> C3
-
+https://www.mermaidchart.com/app/projects/43dc9976-3ce6-44d3-81e5-5012d34dec75/diagrams/72fdeb00-d416-461c-a0ac-f84ac62cbf5a/version/v0.1/edit
 ---
 
 ## 🚀 Key Features
