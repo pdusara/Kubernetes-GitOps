@@ -10,7 +10,13 @@ This project provisions a **production-ready AWS EKS cluster** using **Terraform
 It is designed as a foundation for integrating GitOps tools like **ArgoCD** or **FluxCD**, enabling continuous, automated, and declarative application delivery.
 
 ---
-https://www.mermaidchart.com/app/projects/43dc9976-3ce6-44d3-81e5-5012d34dec75/diagrams/72fdeb00-d416-461c-a0ac-f84ac62cbf5a/version/v0.1/edit
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 ---
 
 ## 🚀 Key Features
