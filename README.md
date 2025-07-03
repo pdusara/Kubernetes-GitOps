@@ -129,4 +129,4 @@ Connect with me on [LinkedIn](www.linkedin.com/in/pritesh-dusara-52709953) if yo
 
 ---
 
-> **If you’re hiring for DevOps, SRE, or Cloud roles, let’s talk!**
+> **If you’re hiring for Cloud roles, let’s talk!**
